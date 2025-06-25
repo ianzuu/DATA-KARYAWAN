@@ -32,9 +32,9 @@ with st.form("form_input"):
     if submitted:
         cursor.execute('''
             INSERT INTO stok (
-                Nama Karyawan, Tempat , Tanggal Lahir, Umur Karyawan, Alamat Karyawan
+                nama_karyawan, tempattanggallahir_karyawan, umur_karyawan, alamat_karyawan
             ) VALUES (?, ?, ?, ?)
-        ''', (nama_karyawan, tempattanggallahir_karyawan, umur_karyawan, alamat_karyawan))
+        ''', (Nama Karyawan, Tempat , Tanggal Lahir, Umur Karyawan, Alamat Karyawan))
         conn.commit()
         st.success("✅ Data berhasil disimpan!")
 
