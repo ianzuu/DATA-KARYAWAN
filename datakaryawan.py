@@ -34,7 +34,7 @@ with st.form("form_input"):
             INSERT INTO stok (
                 nama_karyawan, tempattanggallahir_karyawan, umur_karyawan, alamat_karyawan
             ) VALUES (?, ?, ?, ?)
-        ''', (Nama Karyawan, Tempat , Tanggal Lahir, Umur Karyawan, Alamat Karyawan))
+        ''', (nama_karyawan, tempattanggallahir_karyawan, umur_karyawan, alamat_karyawan))
         conn.commit()
         st.success("✅ Data berhasil disimpan!")
 
@@ -50,3 +50,4 @@ def export_excel():
         st.download_button("📥 Download Excel", f, file_name="hasil_karyawan.xlsx")
 
 export_excel()
+
