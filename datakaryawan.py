@@ -39,9 +39,20 @@ with st.form("form_input"):
         st.success("✅ Data berhasil disimpan!")
 
 # --- Menampilkan data ---
+# --- Menampilkan data ---
 st.subheader("Data Karyawan")
 df = pd.read_sql_query("SELECT * FROM stok", conn)
+
+# Ubah header jadi lebih rapi
+df.rename(columns={
+    'nama_karyawan': 'Nama Karyawan',
+    'tempattanggallahir_karyawan': 'Tempat & Tanggal Lahir',
+    'umur_karyawan': 'Umur',
+    'alamat_karyawan': 'Alamat'
+}, inplace=True)
+
 st.dataframe(df)
+
 
 # --- Export Excel ---
 def export_excel():
