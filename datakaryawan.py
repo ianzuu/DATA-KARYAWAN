@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS stok (
 ''')
 conn.commit()
 
-st.title("Data Karyawan - by ian")
+st.title(" Data Karyawan - by Adriyan ")
 
 # --- Form input ---
 st.subheader("Input Data Karyawan")
